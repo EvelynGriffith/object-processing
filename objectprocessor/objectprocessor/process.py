@@ -46,8 +46,6 @@ def extract_person_data(data: str) -> List[person.Person]:
         )
         # append the current instance of the person class to the data_list variable
         person_list.append(person_object)
-        
-    print(person_list)
     # return the list of all of the specified column
     return person_list
 
@@ -80,19 +78,31 @@ def is_matching_person(
     attribute: str, match: str, search_person: person.Person
 ) -> bool:
     """Determine if the person's specified attribute contains the search term in match."""
-    # TODO: the attribute for matching is name
-      # TODO: return True if the provided search term is in the match
+    # the attribute for matching is name
+    if attribute is search_person[0]:
+      # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-    # TODO: the attribute for matching is country
-      # TODO: return True if the provided search term is in the match
+      return True
+    # the attribute for matching is country
+    if attribute is search_person[1]:
+      # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-    # TODO: the attribute for matching is phone number
-      # TODO: return True if the provided search term is in the match
+      return True
+    # the attribute for matching is phone number
+    if attribute is search_person[2]:
+      # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-    # TODO: the attribute for matching is job
-      # TODO: return True if the provided search term is in the match
+      return True
+    # the attribute for matching is job
+    if attribute is search_person[3]:
+      # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-    # TODO: the attribute for matching is email
-      # TODO: return True if the provided search term is in the match
+      return True
+    # the attribute for matching is email
+    if attribute is search_person[4]:
+      # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
+      return True
     # return False if none of the conditions are matching
+    else:
+      return False
