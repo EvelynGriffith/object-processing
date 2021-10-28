@@ -43,9 +43,9 @@ def main(
         raise typer.Abort()
     # the file was specified and it is valid so we should read and check it
     if input_file.is_file():
+        # read in the data from the specified file containing information about people
         with open(input_file, "r") as f:
             process.extract_person_data(f.read())
-        # TODO: read in the data from the specified file containing information about people
         # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
         # TODO: search for the people with an attribute that matches the search term
         # TODO: display the details about the matching people to the console

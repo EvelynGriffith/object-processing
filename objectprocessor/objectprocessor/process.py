@@ -1,6 +1,6 @@
 """Extract the data about the person from the CSV file."""
 
-from typing import List
+from typing import List, Text
 
 import csv
 
@@ -55,7 +55,7 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
     # create an empty list that will store the person data as a list of strings
     converted_person_data = []
     # iterate through every person inside of the person_data list
-    for person in person_data:
+    for person in converted_person_data:
       # create a list out of this person where each of the person's
       # attributes are stored inside of an index in the list
       person_list = []
@@ -66,8 +66,13 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
       person_list.append(str(person.email))
       # append this converted person list to the list called converted_person_data
       converted_person_data.append(person_list)
-    # use the csv.writer approach and the writerows function to write out
-    # the list of lists of strings that contain all of the person data
+      # use the csv.writer approach and the writerows function to write out
+      # the list of lists of strings that contain all of the person data
+      csv_writer = csv.writer(Text[,dialect='excel']["name", "country", "phone_number", "job", "email"])
+      for row in converted_person_data:
+        csv_writer.writerow(row)
+      
+      return converted_person_data
 
 
 def find_matching_people(
