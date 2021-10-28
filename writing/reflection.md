@@ -20,7 +20,7 @@ TODO: Provide your own example of a command and the output that it produces
 
 ### Describe in detail how the provided source code works
 
-TODO: Provide a description of each line in the following source code
+Provide a description of each line in the following source code
 
 ```
 person_index = create_constants(
@@ -42,9 +42,9 @@ This portion of the code is telling the computer to assign all of the attributes
 
 In the code above, the lines are calling upon Name, Country, Phone_Number, Job, and Email respectively becauase they are using person.Person. In doing this they are actually going into the person.py file and calling on the variable "Person" which can then be used to link those attributes to a number which can then be used like an index.
 
-### Describe in detail how the provided source code works
+### Describe in detail how the provided source code works:
 
-TODO: Provide a description of each line in the following source code
+Provide a description of each line in the following source code
 
 ```
 person_attribute = create_constants(
@@ -57,10 +57,7 @@ person_attribute = create_constants(
 )
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This section of code is, first, creating a variable called "person_attribute". Then it is creating constants under that attribute which links the name, country, phone number, job, and email of each person in the txt file to a str value that can then be used to reference those sets of data which have now been set apart from each other and distinguished based on data type (meaning if its a phone number, job, country, name, or email).
 
 ### Describe in detail how the provided source code works
 
@@ -78,10 +75,7 @@ def __init__(
     self.email = email
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This function, in a nut shell, is defining constructors.
 
 ### Describe in detail how the provided source code works
 
