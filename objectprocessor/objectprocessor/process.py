@@ -79,30 +79,44 @@ def is_matching_person(
 ) -> bool:
     """Determine if the person's specified attribute contains the search term in match."""
     # the attribute for matching is name
-    if attribute is search_person[0]:
       # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-      return True
     # the attribute for matching is country
-    if attribute is search_person[1]:
       # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-      return True
     # the attribute for matching is phone number
-    if attribute is search_person[2]:
       # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-      return True
     # the attribute for matching is job
-    if attribute is search_person[3]:
       # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-      return True
     # the attribute for matching is email
-    if attribute is search_person[4]:
       # return True if the provided search term is in the match
       # variable appears inside of the specified attribute
-      return True
     # return False if none of the conditions are matching
-    else:
-      return False
+    if attribute == "name":
+      if match in search_person.name:
+        return True
+      else:
+        return False
+    elif attribute == "country":
+      if match in search_person.country:
+        return True
+      else: 
+        return False
+    elif attribute == "phone number":
+      if match in search_person.phone_number:
+        return True
+      else:
+        return False
+    elif attribute == "job":
+      if match in search_person.job:
+        return True
+      else:
+        return False
+    elif attribute == "email":
+      if match in search_person.email:
+        return True
+      else:
+        return False
+
