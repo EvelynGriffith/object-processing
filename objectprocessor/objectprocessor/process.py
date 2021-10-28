@@ -54,11 +54,19 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
     """Write the person data stored in a list to the specified file."""
     # create an empty list that will store the person data as a list of strings
     converted_person_data = []
-    # TODO: iterate through every person inside of the person_data list
-        # TODO: create a list out of this person where each of the person's
-        # attributes are stored inside of an index in the list
-        # TODO: append this converted person list to the list called converted_person_data
-    # TODO: use the csv.writer approach and the writerows function to write out
+    # iterate through every person inside of the person_data list
+    for person in person_data:
+      # create a list out of this person where each of the person's
+      # attributes are stored inside of an index in the list
+      person_list = []
+      person_list.append(str(person.name))
+      person_list.append(str(person.country))
+      person_list.append(str(person.phone_number))
+      person_list.append(str(person.job))
+      person_list.append(str(person.email))
+      # append this converted person list to the list called converted_person_data
+      converted_person_data.append(person_list)
+    # use the csv.writer approach and the writerows function to write out
     # the list of lists of strings that contain all of the person data
 
 
@@ -69,11 +77,11 @@ def find_matching_people(
     # create an empty list of people who have an attribute matching the search term in match
     matching_person_list = []
     # iterate through all of the people in the person_data list
-    for match in person_data:
-      if attribute == match:
+    for person in person_data:
+      if is_matching_person(attribute, match, person):
       # the current person has an attribute that contains the search term in match
       # add the current person to the matching_person_list        
-        matching_person_list.append(attribute)
+        matching_person_list.append(person)
     # return the matching_person_list
     return matching_person_list
 
