@@ -68,10 +68,14 @@ def find_matching_people(
     """Find people who have matching data for a specified attribute."""
     # create an empty list of people who have an attribute matching the search term in match
     matching_person_list = []
-    # TODO: iterate through all of the people in the person_data list
-        # TODO: the current person has an attribute that contains the search term in match
-            # TODO: add the current person to the matching_person_list
-    # TODO: return the matching_person_list
+    # iterate through all of the people in the person_data list
+    for match in person_data:
+      if attribute == match:
+      # the current person has an attribute that contains the search term in match
+      # add the current person to the matching_person_list        
+        matching_person_list.append(attribute)
+    # return the matching_person_list
+    return matching_person_list
 
 
 def is_matching_person(
