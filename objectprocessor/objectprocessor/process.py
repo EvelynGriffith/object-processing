@@ -68,10 +68,13 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
       converted_person_data.append(person_list)
       # use the csv.writer approach and the writerows function to write out
       # the list of lists of strings that contain all of the person data
-      csv_writer = csv.writer(Text[,dialect='excel']["name", "country", "phone_number", "job", "email"])
+      csv_writer = csv.writer(Text[csvfile, dialect='excel']["name", "country", "phone_number", "job", "email"])
       for row in converted_person_data:
         csv_writer.writerow(row)
-      
+      # with open('input/people.txt', 'w', newline=' ') as csvfile:
+        # rowwriter = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        # rowwriter.writerow(['name', 'country', 'phone_number', 'job', 'email'])
+      # print(converted_person_data)
       return converted_person_data
 
 
@@ -121,7 +124,7 @@ def is_matching_person(
         return True
       else: 
         return False
-    elif attribute == "phone number":
+    elif attribute == "phone_number":
       if match in search_person.phone_number:
         return True
       else:

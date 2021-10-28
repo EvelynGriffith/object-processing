@@ -1,6 +1,6 @@
 # Object Processing
 
-## Gregory M. Kapfhammer
+## Evelyn Griffith
 
 ## Program Output
 
@@ -28,10 +28,19 @@ person_index = create_constants(
 )
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This portion of the code is telling the computer to assign all of the attributes to a number so that they can be called on numerically within later source code. An example would be here:
+
+```
+       person_object = person.Person(
+          line[0], 
+          line[1],
+          line[2],
+          line[3],
+          line[4]
+        )
+```
+
+In the code above, the lines are calling upon Name, Country, Phone_Number, Job, and Email respectively becauase they are using person.Person. In doing this they are actually going into the person.py file and calling on the variable "Person" which can then be used to link those attributes to a number which can then be used like an index.
 
 ### Describe in detail how the provided source code works
 
