@@ -19,31 +19,43 @@ from objectprocessor import person
 def extract_person_data(data: str) -> List[person.Person]:
     """Extract a specified data column from the provided textual contents."""
     # create an empty list of the data
-    person_data = []
+    person_list = []
     # note that the data file:
     # --> contains five columns
     # --> each of which contains textual data with a different meaning
-    # TODO: refer to the file called input/people.txt to learn more about
+    #  refer to the file called input/people.txt to learn more about
     # the format of the comma separated value (CSV) file that we must parse;
     # iterate through each line of the file and extract all relevant details
     # use the csv.reader to accomplish the task of parsing the CSV file
     for line in csv.reader(
-        data.splitlines(),
-        quotechar='"',
-        delimiter=",",
-        quoting=csv.QUOTE_ALL,
-        skipinitialspace=True,
+      data.splitlines(),
+      quotechar='"',
+      delimiter=",",
+      quoting=csv.QUOTE_ALL,
+      skipinitialspace=True,
     ):
-        # TODO: extract each of the attributes about a person from the line variable
-        # TODO: construct a new instance of the Person class that contains all
+        # extract each of the attributes about a person from the line variable
+        # construct a new instance of the Person class that contains all
         # of the attributes that were extracted from the CSV file
-        # TODO: append the current instance of the person class to the data_list variable
-    # TODO: return the list of all of the specified column
+        person_object = person.Person(
+          line[0], 
+          line[1],
+          line[2],
+          line[3],
+          line[4]
+        )
+        # append the current instance of the person class to the data_list variable
+        person_list.append(person_object)
+        
+    print(person_list)
+    # return the list of all of the specified column
+    return person_list
 
 
 def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
     """Write the person data stored in a list to the specified file."""
-    # TODO: create an empty list that will store the person data as a list of strings
+    # create an empty list that will store the person data as a list of strings
+    converted_person_data = []
     # TODO: iterate through every person inside of the person_data list
         # TODO: create a list out of this person where each of the person's
         # attributes are stored inside of an index in the list
@@ -56,7 +68,8 @@ def find_matching_people(
     attribute: str, match: str, person_data: List[person.Person]
 ) -> List[person.Person]:
     """Find people who have matching data for a specified attribute."""
-    # TODO: create an empty list of people who have an attribute matching the search term in match
+    # create an empty list of people who have an attribute matching the search term in match
+    matching_person_list = []
     # TODO: iterate through all of the people in the person_data list
         # TODO: the current person has an attribute that contains the search term in match
             # TODO: add the current person to the matching_person_list
