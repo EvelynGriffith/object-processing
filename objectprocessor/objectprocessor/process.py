@@ -18,7 +18,8 @@ from objectprocessor import person
 
 def extract_person_data(data: str) -> List[person.Person]:
     """Extract a specified data column from the provided textual contents."""
-    # TODO: create an empty list of the data
+    # create an empty list of the data
+    person_data = []
     # note that the data file:
     # --> contains five columns
     # --> each of which contains textual data with a different meaning
