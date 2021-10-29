@@ -99,10 +99,8 @@ def __repr__(self) -> str:
       return f"{self.name} is a {self.job} who lives in {self.country}. You can call this person at {self.phone_number} and email them {self.email}."
 ```
 
-__repr__ method is designed to produce a textual representation. of what our python class looks like in terms of its state.
-supposed to print or display the state. Whereas the __init__ constructs the state.
-This prints out a representation as a string and returns it.
-it uses an f string because it helps to retrieve the state of the object. We access the state using self."whatever is here"(which is the state of the object: also known as an attribute). Then we display the state using the same f string we would normally use. This helps to refer to an object through self which is an implicit parameter to all of the methods. We can then access the state inside of an object by using self.email, self.job, etc.
+The __repr__ method is designed to produce a textual representation of what our python class looks like in terms of its state.
+It is supposed to print or display the state. Whereas the __init__ constructs the state. The purpose of this prints out a representation as a string and returns it. It uses an f string because it helps to retrieve the state of the object. We access the state using `self."whatever is here"` (which is the state of the object, also known as an attribute). We then display the state using the same f string we would normally use. This helps to refer to an object through self which is an implicit parameter to all of the methods. We can then access the state inside of an object by using self.email, self.job, etc.
 
 
 ## Professional Development
