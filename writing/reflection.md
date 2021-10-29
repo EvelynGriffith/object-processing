@@ -77,6 +77,18 @@ def __init__(
 
 This function, in a nut shell, is defining constructors. Basically what it is doing is first using a function definition to define the inputs and outputs of this function which are the variable "name", "country", "phone_number", "job", and "email" (all of which are strings). The function also has another variable input called self which doesnt chave a type definition in the beginning function definition. The function then states that the output of this function should be None. This is because this function doesn't really need to produce an output it just needs to define the constructors for a person. The function will then go into the self.name sections of the function which is really the meat and potatoes as for why the function exists. This will essentially give each of the already existing people a way to distinguish their own personal data fromt the rest of the group data. This self." " is a way for the Person Class to reference individual data as opposed to group sets of data.
 
+This is creating the constructor.
+Class definition: designates that we will create a new data type.
+When designation of methid __init__ (short for initialization) that is the constructor!
+the first parameter in this code is always called self.
+What does self do in context of a constructor?
+self refers to the new instance of the class that is about to be constructed.
+makes init self refferential and allows us to use itself to modify its own state.
+The self.name etc. block of code is creating a new instance of the person class that is defining a data set for each individual.
+What is the purpose of None? None usually means "no return value". In this instance it means that the constructor doesnt return something but it does construct something and return it back to the code.
+
+
+
 ### Describe in detail how the provided source code works
 
 TODO: Provide a description of each line in the following source code
@@ -87,10 +99,11 @@ def __repr__(self) -> str:
       return f"{self.name} is a {self.job} who lives in {self.country}. You can call this person at {self.phone_number} and email them {self.email}."
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+__repr__ method is designed to produce a textual representation. of what our python class looks like in terms of its state.
+supposed to print or display the state. Whereas the __init__ constructs the state.
+This prints out a representation as a string and returns it.
+it uses an f string because it helps to retrieve the state of the object. We access the state using self."whatever is here"(which is the state of the object: also known as an attribute). Then we display the state using the same f string we would normally use. This helps to refer to an object through self which is an implicit parameter to all of the methods. We can then access the state inside of an object by using self.email, self.job, etc.
+
 
 ## Professional Development
 
@@ -98,10 +111,7 @@ no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 TODO: Provide a one-paragraph response that answers this question in your own words.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+oop feels harder and like I have to write more code. You tend to have to write more code. It helps to be more disciplined and your system is slightly better in terms of structure.
 
 ### What was the greatest challenge that you faced when completing this assignment?
 
