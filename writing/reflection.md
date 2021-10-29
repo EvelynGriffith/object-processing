@@ -77,7 +77,7 @@ def __init__(
 
 This is creating the constructor. This function is actually a Class definition which designates that we will create a new data type. When designation of method __init__ (short for initialization) is the constructor, the first parameter in this code is always called self. What does self do in context of a constructor? Self refers to the new instance of the class that is about to be constructed. This makes init self refferential and allows us to use itself to modify its own state. The self.name etc. block of code is creating a new instance of the person class that is defining a data set for each individual. What is the purpose of None? None usually means "no return value", but in this instance it means that the constructor doesnt return something but it does construct something and return it back to the code. This function, in a nut shell, is creating/defining the constructor. The function will then go into the self.name sections of the function which is really the meat and potatoes as for why the function exists. This will essentially give each of the already existing people a way to distinguish their own personal data fromt the rest of the group data. This self." " is a way for the Person Class to reference individual data as opposed to group sets of data.
 
-### Describe in detail how the provided source code works.
+### Describe in detail how the provided source code works
 
 Provide a description of each line in the following source code
 
