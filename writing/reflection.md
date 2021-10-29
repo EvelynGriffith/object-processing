@@ -61,7 +61,7 @@ This section of code is, first, creating a variable called "person_attribute". T
 
 ### Describe in detail how the provided source code works
 
-TODO: Provide a description of each line in the following source code
+Provide a description of each line in the following source code
 
 ```
 def __init__(
@@ -75,7 +75,7 @@ def __init__(
     self.email = email
 ```
 
-This function, in a nut shell, is defining constructors.
+This function, in a nut shell, is defining constructors. Basically what it is doing is first using a function definition to define the inputs and outputs of this function which are the variable "name", "country", "phone_number", "job", and "email" (all of which are strings). The function also has another variable input called self which doesnt chave a type definition in the beginning function definition. The function then states that the output of this function should be None. This is because this function doesn't really need to produce an output it just needs to define the constructors for a person. The function will then go into the self.name sections of the function which is really the meat and potatoes as for why the function exists. This will essentially give each of the already existing people a way to distinguish their own personal data fromt the rest of the group data. This self." " is a way for the Person Class to reference individual data as opposed to group sets of data.
 
 ### Describe in detail how the provided source code works
 
