@@ -21,18 +21,18 @@ console = Console()
 def prepare_person_list_for_display(person_list: List[person.Person]) -> str:
     """Process the list of people for display in the console."""
     # create an empty string that will contain all of the text
-    text = ()
+    text = []
     # iterate through each of the people in the person_list and
     # add all of their textual details to a string; making sure to
     # preface each entry with a "-" and add a newline
     # return the list of generated text for each person
-    for i in person_list:
-        if i = 
-        person_list.append(str(person.name))
-        person_list.append(str(person.country))
-        person_list.append(str(person.phone_number))
-        person_list.append(str(person.job))
-        person_list.append(str(person.email))
+    for person in person_list:
+        text.append(str("-") + str(person.name))
+        text.append(str("-") + str(person.country))
+        text.append(str("-") + str(person.phone_number))
+        text.append(str("-") + str(person.job))
+        text.append(str("-") + str(person.email))
+    return text
     
 
 
