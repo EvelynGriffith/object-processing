@@ -101,10 +101,7 @@ Object Oriented Programming means that you have to write a lot more code usually
 TODO: Provide a one-paragraph response that answers this question in your own words.
 TODO: Provide a response to this question that is different from any previous answers.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+The biggest challenge I faced when I was completing this project was completing the source code in the process.py file, and specifically pertaining to the write_person_data function. I was unsure what to do in regards to the writerows and the csv file. I was unsure how to implement this function syntactically and I wasnt sure how to go about making sure that the function also worked in the way that it was meant to.
 
 ### Leveraging your response to the previous question, how did you overcome the challenge?
 
