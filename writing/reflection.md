@@ -94,8 +94,6 @@ It is supposed to print or display the state. Whereas the __init__ constructs th
 
 ### What are the benefits and drawbacks of object-oriented programming in Python?
 
-Provide a one-paragraph response that answers this question in your own words.
-
 Object Oriented Programming means that you have to write a lot more code usually. However, it helps to make your code more disciplined and your system is slightly better in terms of the structuring of your code.
 
 ### What was the greatest challenge that you faced when completing this assignment?
