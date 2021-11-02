@@ -27,11 +27,11 @@ def prepare_person_list_for_display(person_list: List[person.Person]) -> str:
     # preface each entry with a "-" and add a newline
     # return the list of generated text for each person
     for person in person_list:
-        text.append(str("-") + str(person.name))
-        text.append(str("-") + str(person.country))
-        text.append(str("-") + str(person.phone_number))
-        text.append(str("-") + str(person.job))
-        text.append(str("-") + str(person.email))
+        text.append(str("-") + str(person.name) + str("\n"))
+        text.append(str("-") + str(person.country) + str("\n"))
+        text.append(str("-") + str(person.phone_number) + str("\n"))
+        text.append(str("-") + str(person.job) + str("\n"))
+        text.append(str("-") + str(person.email) + str("\n"))
     return text
     
 

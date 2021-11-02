@@ -75,7 +75,6 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
         # rowwriter = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         # rowwriter.writerow(['name', 'country', 'phone_number', 'job', 'email'])
       # print(converted_person_data)
-      return converted_person_data
 
 
 def find_matching_people(
