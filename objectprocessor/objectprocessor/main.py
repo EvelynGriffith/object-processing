@@ -32,6 +32,16 @@ def prepare_person_list_for_display(person_list: List[person.Person]) -> str:
         text.append(str("-") + str(person.phone_number) + str("\n"))
         text.append(str("-") + str(person.job) + str("\n"))
         text.append(str("-") + str(person.email) + str("\n"))
+        if person in text == "name":
+            return person.name
+        elif person in text == "country":
+            return person.country
+        elif person in text == "phone_number":
+            return person.phone_number
+        elif person in text == "job":
+            return person.job
+        elif person in text == "email":
+            return person.email
     return text
     
 
@@ -55,6 +65,17 @@ def main(
         # read in the data from the specified file containing information about people
         with open(input_file, "r") as f:
             process.extract_person_data(f.read())
+
+    console.print()
+    console.print(f":abacus: Reading in the data from the specified file input/people.txt")
+    console.print()
+
+    console.print()
+    console.print(f":rocket: Parsing the data file and transforming it into people objects")
+    console.print()
+
+    console.print()
+    console.print(f": : Searching for the people with an email that matches the search term 'john79'")
         # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
         # TODO: search for the people with an attribute that matches the search term
         # TODO: display the details about the matching people to the console
