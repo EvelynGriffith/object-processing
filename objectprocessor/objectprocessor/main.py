@@ -1,5 +1,6 @@
 """Input and process objects about people."""
 
+from os import name
 from pathlib import Path
 
 from typing import List
@@ -76,6 +77,18 @@ def main(
 
     console.print()
     console.print(f": : Searching for the people with an email that matches the search term 'john79'")
+    console.print()
+
+    console.print()
+    console.print(f":sparkles: Here are the matching people:")
+    console.print()
+
+    console.print()
+    console.print(f"- {name} is a {job} who lives in {country}. You can call this person at {phone_number} or email them at {email}.")
+    console.print()
+
+    console.print()
+    console.print(f":sparkles: saving people to the file output/people.txt.")
         # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
         # TODO: search for the people with an attribute that matches the search term
         # TODO: display the details about the matching people to the console
