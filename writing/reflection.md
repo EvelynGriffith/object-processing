@@ -16,14 +16,28 @@
 🕵 Searching for the people with an email that matches the search term john79
 
 ✨ Here are the matching people:
-['-John Johnson', '-Brazil', '-197-728-4342', '-Food technologist', '-john79@example.net']
+
+- John Johnson is a Food technologist who lives in Brazil. You can call this person at 197-728-4342 and email them at john79@example.net   
 
 ✨ Saving the matching people to the file output/people.txt
 ```
 
 #### Provide the command the output for the second run of the `objectprocessor`
 
+```
+🚀 Parsing the data file and transforming it into people objects
 
+🕵 Searching for the people with an email that matches the search term emma1
+
+✨ Here are the matching people:
+
+- Christine Luna is a Holiday representative who lives in Sweden. You can call this person at 8324871668 and email them at
+emma11@example.org
+- Amy Harris is a Risk manager who lives in Saint Barthelemy. You can call this person at 361.483.6556x05950 and email them at
+emma10@example.com
+
+✨ Saving the matching people to the file output/people.txt
+```
 
 ## Source Code
 
