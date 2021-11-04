@@ -67,6 +67,12 @@ def main(
         with open(input_file, "r") as f:
             process.extract_person_data(f.read())
 
+    # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
+    # TODO: search for the people with an attribute that matches the search term
+    # TODO: display the details about the matching people to the console
+    # TODO: make sure to use the prepare_person_list_for_display function for creating a suitable display
+    # TODO: save the details about the matching people to the file system in the specified output directory
+
     console.print()
     console.print(f":abacus: Reading in the data from the specified file input/people.txt")
     console.print()
@@ -76,7 +82,7 @@ def main(
     console.print()
 
     console.print()
-    console.print(f": : Searching for the people with an email that matches the search term 'john79'")
+    console.print(f":detective: Searching for the people with an email that matches the search term 'john79'")
     console.print()
 
     console.print()
@@ -89,8 +95,4 @@ def main(
 
     console.print()
     console.print(f":sparkles: saving people to the file output/people.txt.")
-        # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
-        # TODO: search for the people with an attribute that matches the search term
-        # TODO: display the details about the matching people to the console
-        # TODO: make sure to use the prepare_person_list_for_display function for creating a suitable display
-        # TODO: save the details about the matching people to the file system in the specified output directory
+    console.print()

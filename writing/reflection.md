@@ -98,17 +98,8 @@ Object Oriented Programming means that you have to write a lot more code usually
 
 ### What was the greatest challenge that you faced when completing this assignment?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-TODO: Provide a response to this question that is different from any previous answers.
-
-The biggest challenge I faced when I was completing this project was completing the source code in the process.py file, and specifically pertaining to the write_person_data function. I was unsure what to do in regards to the writerows and the csv file. I was unsure how to implement this function syntactically and I wasnt sure how to go about making sure that the function also worked in the way that it was meant to.
+The biggest challenge I faced when I was completing this project was completing the source code in the process.py file, and specifically pertaining to the write_person_data function. I was unsure what to do in regards to the writerows and the csv file. I was unsure how to implement this function syntactically and I wasnt sure how to go about making sure that the function also worked in the way that it was meant to. I also struggled a lot with the main.py. There was just a lot of code to write that I wasn't familiar with and a lot of times I didn't know where to begin.
 
 ### Leveraging your response to the previous question, how did you overcome the challenge?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-TODO: Provide a response to this question that is different from any previous answers.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+In order to overcome this challenge the thing I needed to do, and probably should have done way earlier, was ask for help. I really needed help with this lab. It just wasn't accomplishable for me on my own and I think if I had recognized that sooner I would have completed the lab much earlier and understood what I needed to do. I guess what I ended up doing in the main.py was finishing out the todos with the help of various TLs and in terms of the write_person_data function I was able to complete it by realizing that there needed to be some conditional logic that would print the attributes that were needed from the list. This translated into an if/elif statement that would allow things to print in the way that they were meant to.
