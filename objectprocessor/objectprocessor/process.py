@@ -44,29 +44,23 @@ def extract_person_data(data: str) -> List[person.Person]:
     return person_list
 
 
-def write_person_data(file_name: str, per: List[person.Person]) -> None:
+def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
     """Write the person data stored in a list to the specified file."""
     # create an empty list that will store the person data as a list of strings
     converted_person_data = []
     # iterate through every person inside of the person_data list
-    for per in converted_person_data:
+    for per in person_data:
         # create a list out of this person where each of the person's
         # attributes are stored inside of an index in the list
-        person_list = []
-        person_list.append(str(per.name))
-        person_list.append(str(per.country))
-        person_list.append(str(per.phone_number))
-        person_list.append(str(per.job))
-        person_list.append(str(per.email))
+        converted_person_data.append(per.create_list())
         # append this converted person list to the list called converted_person_data
-        converted_person_data.append(person_list)
-        # use the csv.writer approach and the writerows function to write out
-        # the list of lists of strings that contain all of the person data
-        with open(file_name, "w", newline="") as csvfile:
-            writer = csv.writer(
-                csvfile, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL
-            )
-            writer.writerows(converted_person_data)
+    # use the csv.writer approach and the writerows function to write out
+    # the list of lists of strings that contain all of the person data
+    with open(file_name, "w", newline="") as csvfile:
+        writer = csv.writer(
+            csvfile, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL
+        )
+        writer.writerows(converted_person_data)
 
 
 def find_matching_people(
@@ -130,3 +124,4 @@ def is_matching_person(
             return True
         else:
             return False
+    return False
