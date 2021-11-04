@@ -44,7 +44,7 @@ def extract_person_data(data: str) -> List[person.Person]:
     return person_list
 
 
-def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
+def write_person_data(file_name: str, per: List[person.Person]) -> None:
     """Write the person data stored in a list to the specified file."""
     # create an empty list that will store the person data as a list of strings
     converted_person_data = []
