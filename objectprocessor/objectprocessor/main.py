@@ -39,7 +39,6 @@ def main(
     output_file: Path = typer.Option(...),
 ):
     """Input data about a person and then analyze and save it."""
-
     with open(input_file, "r") as f:
         extracted_data = process.extract_person_data(f.read())
     # display the details about the matching people to the console
