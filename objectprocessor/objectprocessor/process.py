@@ -1,6 +1,6 @@
 """Extract the data about the person from the CSV file."""
 
-from typing import List, Text
+from typing import List
 
 import csv
 
@@ -49,15 +49,15 @@ def write_person_data(file_name: str, person_data: List[person.Person]) -> None:
     # create an empty list that will store the person data as a list of strings
     converted_person_data = []
     # iterate through every person inside of the person_data list
-    for person in converted_person_data:
+    for per in converted_person_data:
         # create a list out of this person where each of the person's
         # attributes are stored inside of an index in the list
         person_list = []
-        person_list.append(str(person.name))
-        person_list.append(str(person.country))
-        person_list.append(str(person.phone_number))
-        person_list.append(str(person.job))
-        person_list.append(str(person.email))
+        person_list.append(str(per.name))
+        person_list.append(str(per.country))
+        person_list.append(str(per.phone_number))
+        person_list.append(str(per.job))
+        person_list.append(str(per.email))
         # append this converted person list to the list called converted_person_data
         converted_person_data.append(person_list)
         # use the csv.writer approach and the writerows function to write out
@@ -76,11 +76,11 @@ def find_matching_people(
     # create an empty list of people who have an attribute matching the search term in match
     matching_person_list = []
     # iterate through all of the people in the person_data list
-    for person in person_data:
-        if is_matching_person(attribute, match, person):
+    for per in person_data:
+        if is_matching_person(attribute, match, per):
             # the current person has an attribute that contains the search term in match
             # add the current person to the matching_person_list
-            matching_person_list.append(person)
+            matching_person_list.append(per)
     # return the matching_person_list
     return matching_person_list
 

@@ -1,6 +1,5 @@
 """Input and process objects about people."""
 
-from os import name
 from pathlib import Path
 
 from typing import List
