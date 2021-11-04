@@ -31,8 +31,6 @@ def prepare_person_list_for_display(person_list: List[person.Person]) -> str:
         text += f"\n- {per}"
     return text
 
-    
-
 
 @cli.command()
 def main(
@@ -49,9 +47,7 @@ def main(
     # make sure to use the prepare_person_list_for_display function for creating a suitable display
     # save the details about the matching people to the file system in the specified output directory
     # extracted_data = process.extract_person_data(search_term)
-    matching_data = process.find_matching_people(
-        attribute, search_term, extracted_data
-    )
+    matching_data = process.find_matching_people(attribute, search_term, extracted_data)
     display_data = prepare_person_list_for_display(matching_data)
 
     process.write_person_data(str(output_file), matching_data)
@@ -71,6 +67,4 @@ def main(
     console.print(":Sparkles: Here are the matching people:")
     console.print(f"{display_data}")
     console.print()
-    console.print(
-        ":Sparkles: Saving the matching people to the file output/people.txt"
-    )
+    console.print(":Sparkles: Saving the matching people to the file output/people.txt")
