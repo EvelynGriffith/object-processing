@@ -6,15 +6,24 @@
 
 ### Use two fenced code blocks to provide output from two different runs of `objectprocessor` with two different inputs
 
-TODO: Provide the complete command-line for your use of the `objectprocessor` program
-
 #### Provide the command the output for the first run of the `objectprocessor`
 
-TODO: Provide your own example of a command and the output that it produces
+```
+🧮 Reading in the data from the specified file input/people.txt
+
+🚀 Parsing the data file and transforming it into people objects
+
+🕵 Searching for the people with an email that matches the search term john79
+
+✨ Here are the matching people:
+['-John Johnson', '-Brazil', '-197-728-4342', '-Food technologist', '-john79@example.net']
+
+✨ Saving the matching people to the file output/people.txt
+```
 
 #### Provide the command the output for the second run of the `objectprocessor`
 
-TODO: Provide your own example of a command and the output that it produces
+
 
 ## Source Code
 

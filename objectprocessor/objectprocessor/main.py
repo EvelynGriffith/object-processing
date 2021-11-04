@@ -22,28 +22,15 @@ console = Console()
 def prepare_person_list_for_display(person_list: List[person.Person]) -> str:
     """Process the list of people for display in the console."""
     # create an empty string that will contain all of the text
-    text = []
+    text = ""
     # iterate through each of the people in the person_list and
     # add all of their textual details to a string; making sure to
     # preface each entry with a "-" and add a newline
     # return the list of generated text for each person
-    for person in person_list:
-        text.append(str("-") + str(person.name) + str("\n"))
-        text.append(str("-") + str(person.country) + str("\n"))
-        text.append(str("-") + str(person.phone_number) + str("\n"))
-        text.append(str("-") + str(person.job) + str("\n"))
-        text.append(str("-") + str(person.email) + str("\n"))
-        if person in text == "name":
-            return person.name
-        elif person in text == "country":
-            return person.country
-        elif person in text == "phone_number":
-            return person.phone_number
-        elif person in text == "job":
-            return person.job
-        elif person in text == "email":
-            return person.email
+    for per in person_list:
+        text += f"\n- {per}"
     return text
+
     
 
 
@@ -55,44 +42,35 @@ def main(
     output_file: Path = typer.Option(...),
 ):
     """Input data about a person and then analyze and save it."""
-    # display details about the file provided on the command line
-    data_text = ""
-    # the file was not specified so we cannot continue using program
-    if input_file is None:
-        console.print("No data file specified!")
-        raise typer.Abort()
-    # the file was specified and it is valid so we should read and check it
-    if input_file.is_file():
-        # read in the data from the specified file containing information about people
-        with open(input_file, "r") as f:
-            process.extract_person_data(f.read())
 
-    # TODO: transform the data in the CSV file (now in a string) into a list of instances of the Person class
-    # TODO: search for the people with an attribute that matches the search term
-    # TODO: display the details about the matching people to the console
-    # TODO: make sure to use the prepare_person_list_for_display function for creating a suitable display
-    # TODO: save the details about the matching people to the file system in the specified output directory
+    with open(input_file, "r") as f:
+        extracted_data = process.extract_person_data(f.read())
+    # display the details about the matching people to the console
+    # make sure to use the prepare_person_list_for_display function for creating a suitable display
+    # save the details about the matching people to the file system in the specified output directory
+    # extracted_data = process.extract_person_data(search_term)
+    matching_data = process.find_matching_people(
+        attribute, search_term, extracted_data
+    )
+    display_data = prepare_person_list_for_display(matching_data)
 
-    console.print()
-    console.print(f":abacus: Reading in the data from the specified file input/people.txt")
-    console.print()
+    process.write_person_data(str(output_file), matching_data)
 
+    console.print(
+        ":abacus: Reading in the data from the specified file input/people.txt"
+    )
     console.print()
-    console.print(f":rocket: Parsing the data file and transforming it into people objects")
+    console.print(
+        ":rocket: Parsing the data file and transforming it into people objects"
+    )
     console.print()
-
+    console.print(
+        f":detective: Searching for the people with an email that matches the search term {search_term}"
+    )
     console.print()
-    console.print(f":detective: Searching for the people with an email that matches the search term 'john79'")
+    console.print(":Sparkles: Here are the matching people:")
+    console.print(f"{display_data}")
     console.print()
-
-    console.print()
-    console.print(f":sparkles: Here are the matching people:")
-    console.print()
-
-    console.print()
-    console.print(f"- {name} is a {job} who lives in {country}. You can call this person at {phone_number} or email them at {email}.")
-    console.print()
-
-    console.print()
-    console.print(f":sparkles: saving people to the file output/people.txt.")
-    console.print()
+    console.print(
+        ":Sparkles: Saving the matching people to the file output/people.txt"
+    )
